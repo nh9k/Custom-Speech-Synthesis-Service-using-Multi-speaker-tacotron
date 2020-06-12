@@ -167,7 +167,7 @@ def save_audio(audio, path, sample_rate=None):
     - new_inna + kss + LEEJH
         - new_inna, kss, LEEJH were the best results.
     - new_inna + kss + LEEJH + nandong2
-        - nandong2 were the best results.
+        - nandong2 was the best results.
 
 <br/>  
 
