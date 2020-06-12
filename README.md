@@ -206,9 +206,9 @@ Thank you so much,
 <br/>  
 
 ## Team member
-We've been through the whole process together, but main role is...   
-[Nanhee Kim](https://github.com/nh9k): Learning and Making Web Service, Provided main idea.  
-[Hoyeon Kim](https://github.com/mozzihozzi): To use for service, created phrase and composed BGM with synthesized voice, team learder   
+We've been through the `whole process together`, but main role is...   
+[Nanhee Kim](https://github.com/nh9k): Learning and Making Web Service, Provided main idea   
+[Hoyeon Kim](https://github.com/mozzihozzi): To use for service, created phrase and composed BGM with synthesized voice, team leader   
 [Juhyung Lee](https://github.com/darpa776): Got a good custom datasets, and selection     
   
 <br/>  
