@@ -93,6 +93,8 @@ python app.py --load_path logs/son+yuinna --num_speakers=2
 
 ## some issues
 #### Librosa version problem
+If you use a different version of librosa(0.6.2 or 0.6.3), learning can stop after 500 steps.  
+Fix it with the following source code. (the file:`audio/__init__.py`)  
 - Learning (Linux server, Librosa 0.6.2, 0.6.3)
 ```
 #librosa 0.6.2, 0.6.3
