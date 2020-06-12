@@ -196,10 +196,10 @@ coming soon!
 
 ## References
 Thank you so much,  
-- [Multi-speaker-tacotron-tensorflow]((https://github.com/carpedm20/multi-speaker-tacotron-tensorflow)) / carpedm20      
-- [딥러닝 음성합성 multi-speaker-tacotron(tacotron+deepvoice)설치 및 사용법]((http://nblog.syszone.co.kr/archives/9416)) / 서진우 님    
-- [인공지능 deep voice를 이용한 TTS(음성합성) 구현하기 _ 손석희 앵커]((http://melonicedlatte.com/machinelearning/2018/07/02/215933.html)) / melonicedlatte     
-- Older friend [Hyun Kim](#) from Power Supply Robot Club  
+- [Multi-speaker-tacotron-tensorflow](https://github.com/carpedm20/multi-speaker-tacotron-tensorflow) / carpedm20      
+- [딥러닝 음성합성 multi-speaker-tacotron(tacotron+deepvoice)설치 및 사용법](http://nblog.syszone.co.kr/archives/9416) / 서진우 님    
+- [인공지능 deep voice를 이용한 TTS(음성합성) 구현하기 _ 손석희 앵커](http://melonicedlatte.com/machinelearning/2018/07/02/215933.html) / melonicedlatte     
+- Older friend Hyun Kim from [Power Supply Robot Club](https://nh9k.github.io/control/PowerSupply-Robot-Club.html)   
 
 <br/>  
 
