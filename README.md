@@ -180,7 +180,7 @@ You can refer to [our version](#).
 
 ## Model
 
-If you want to model-learning, you can refer to [our source code(Custom-Speech-Synthesis Service)](https://github.com/nh9k/Custom-Speech-Synthesis-Service-using-Multi-speaker-tacotron) or source code here.  
+If you want to model-learning, you can refer to source code here.  
 
 - [Multi-speaker-tacotron model](https://github.com/carpedm20/multi-speaker-tacotron-tensorflow)     
 
@@ -191,8 +191,10 @@ If you want to model-learning, you can refer to [our source code(Custom-Speech-S
 
 <br/>  
 
-## Real demo web page & Source Code
-coming soon!
+## Real demo web page & Source Code  
+
+The source code and demo pages can be problematic.(Because it contains individual voices)
+I will provide only demo pages in the form of templates later.
 
 <br/>  
 
