@@ -193,8 +193,7 @@ If you want to model-learning, you can refer to source code here.
 
 ## Real demo web page & Source Code  
 
-The source code and demo pages can be problematic.(Because it contains individual voices)
-I will provide only demo pages in the form of templates later.
+I am reviewing the source code part that can be provided without any problems.
 
 <br/>  
 
