@@ -9,7 +9,7 @@ We won an overwhelming first place in the competition (Electronic Engineering Cr
 
 - Learning with data that includes Seok-Hee Son (News anchor), In-Na Yoo (Actress), Korean corpus, Ju-Hyung Lee (Team member), and Nan-Hee Kim (Team member)  
 
-- Created web services([Demo video](https://nh9k.github.io/ml/Custom-Service.html)) using `flask` on the basis of [carpedm20/Multi-Speaker Tacotron in TensorFlow](https://github.com/carpedm20/multi-speaker-tacotron-tensorflow) through good model learning results, and its contents are `basic synthesizer`, `letter writing`, `briefing`, `alarm service` 
+- Created web services([Demo video](https://nh9k.github.io/ml/Custom-Service.html)) using `flask` on the basis of [carpedm20/Multi-Speaker Tacotron in TensorFlow](https://github.com/carpedm20/multi-speaker-tacotron-tensorflow) through good model learning results, and its contents are `Basic synthesizer`, `Letter writing`, `Schedule briefing`, `Alarm service` 
 
 - Called up `learned log(.ckpt)` with a `good speaker combination` and performed speech synthesis by `switching model` during the service
 
@@ -30,14 +30,14 @@ We won an overwhelming first place in the competition (Electronic Engineering Cr
 ```
 python3 -m audio.silence --audio_pattern "./datasets/yuinna/audio/*.wav" --method=pydub`
 ```
-- Cuted into silent sections and learned with matched lines for voice file.
+- Cut into silent sections and learned with matched lines for voice file.
 
 #### Create a file : numpy, npz  
 
 ```
 python3 -m datasets.generate_data ./datasets/son/alignment.json
 ```
-- alignment is lines
+- alignment means lines that matched audios.
 
 #### Concatenate WAV file (Method: SoX v14.4.1)  
  
@@ -163,7 +163,7 @@ def save_audio(audio, path, sample_rate=None):
 - Best combination  
     - son + yuinna
         - son was the best result.
-        - yuinna was the worst result
+        - yuinna was the worst result.
     - new_inna + kss + LEEJH
         - new_inna, kss, LEEJH were the best results.
     - new_inna + kss + LEEJH + nandong2
