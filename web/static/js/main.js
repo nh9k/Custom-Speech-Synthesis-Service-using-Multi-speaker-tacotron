@@ -24,7 +24,7 @@ function generate(ip, port, text, speaker_id) {
             wavesurfer.load(url);
             $("#synthesize").removeClass("is-loading");
         }).catch(function (err) {
-            showWarning("¿¡·¯°¡ ¹ß»ýÇß½À´Ï´Ù");
+            showWarning("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß»ï¿½ï¿½ß½ï¿½ï¿½Ï´ï¿½");
             inProgress = false;
             $("#synthesize").removeClass("is-loading");
         });
@@ -97,13 +97,7 @@ function generate(ip, port, text, speaker_id) {
             var speaker_id = $('input[name=id]:checked').val();
             var speaker = $('input[name=id]:checked').attr("speaker");
 
-            //192.168.0.211 - ³­µ¿ÀÌÁý
-            //172.20.10.5 - ÁÖµ¿ÀÌ ÇÖ½ºÆÌ
-            //192.168.0.28 - ·¦½Ç
-            //192.168.35.55 - Åõ½æ, sk 5g
-            //192.168.0.15 - ÄÁÅ×½ºÆ® 4
-
-            generate('192.168.0.28', 8888, text, speaker_id);
+            generate('your ip address', 8888, text, speaker_id);
 
             var lowpass = wavesurfer.backend.ac.createGain();
             wavesurfer.backend.setFilter(lowpass);
