@@ -1,0 +1,212 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lettering Service</title>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+    <!--<link href="https://fonts.googleapis.com/css?family=Poor+Story&display=swap" rel="stylesheet">-->
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.css') }}">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+    <!-- Owl Carousel  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Modernizr JS -->
+    <script src="{{ url_for('static', filename='js/modernizr-2.6.2.min.js') }}"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="{{ url_for('static', filename='js/respond.min.js') }}"></script>
+    <![endif]-->
+    <!--여기는 tacotron 소스-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://wavesurfer-js.org/dist/wavesurfer.min.js"></script>
+    <script src="{{ url_for('static', filename='js/siriwave.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <style>
+        #text {
+            font-size: 1.2em;
+            padding: 2em 2em 2em 2em;
+            height: 300px;
+            background: url(https://data.ac-illust.com/data/thumbnails/92/9293dd582577520d41737f01435dd46b_t.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: black;
+        }
+        body {
+            background: white url(https://i.pinimg.com/originals/bc/67/f7/bc67f78f74cba6a52a850ad2e7bc964f.jpg);
+        }
+    </style>
+</head>
+<body>
+    <div class="gtco-loader"></div>
+
+    <div id="page">
+        <nav class="gtco-nav" role="navigation">
+            <div class="gtco-container">
+                <div class="row animate-box">
+                    <div class="col-xs-2">
+                        <div id="gtco-logo"><a href="http://192.168.0.28:8888/">Custom TTS.</a></div>
+                    </div>
+                    <div class="col-xs-10 text-right menu-1">
+                        <ul>
+                            <li class="active"><a href="http://192.168.0.28:8888/">HOME</a></li>
+                            <li><a href="http://192.168.0.28:8888/basics">BASIC</a></li>
+                            <li class="has-dropdown">
+                                <a href="http://192.168.0.28:8888/lettering">LETTER</a>
+                            </li>
+                            <li class="has-dropdown">
+                                <a href="http://192.168.0.28:8888/alarm">Alarm</a>
+                                <ul class="dropdown">
+                                    <li><a href="http://192.168.0.28:8888/alarm_morningcall">모닝콜</a></li>
+                                    <li><a href="http://192.168.0.28:8888/alarm_brief">일정브리핑</a></li>
+                                    <li><a href="http://192.168.0.28:8888/alarm_birthday">생일축하</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="http://192.168.0.28:8888/contact">ABOUT</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+        <header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-image:url(https://keltymentalhealth.ca/sites/default/files/styles/max_1300x1300/public/images/love-letter-e1393478060868.jpg?itok=IUD5vCWS)" ;>
+            <div class="overlay"></div>
+            <div class="gtco-container">
+                <div class="row animate-box">
+                    <div class="col-md-8 col-md-offset-2 text-center">
+                        <div class="display-t">
+                            <div class="display-tc animate-box" data-animate-effect="fadeIn">
+                                <h1>Lettering</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="gtco-counter" class="gtco-bg gtco-cover gtco-counter">
+            <!--style="background-color: black;-->
+            <!--<div class="overlay"></div>-->
+            <div class="gtco-container">
+                <div class="row animate-box">
+                    <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+                        <div class="field has-text-centered">
+                            <br />
+                            <br />
+                            <br />
+                            <h2>친구에게 편지를 써보세요</h2>
+                            <p>부끄러움이 많은 당신이 선물해줄 수 있는 가장 큰 선물,<font color="orange"> 마음 </font>을 선물해보세요</p>
+                            <p>아래 칸에 편지를 써보세요</p>
+                        </div>
+                        <div class="field">
+                            <div class="control has-icons-right">
+                                <textarea class="textarea" id="text" placeholder="{{ text }} "></textarea>
+                                <span class="icon is-small is-right" id="text-warning-icon" style="display:none">
+                                    <i class="fa fa-warning"></i>
+                                </span>
+                            </div>
+                            <p class="help is-danger" id="text-warning" style="display:none">
+                                Wrong sentence
+                            </p>
+                        </div>
+                        <div class="field has-text-centered">
+                            <p><br /><br />원하는 목소리를 선택하고 <font color="orange">편지 읽어주세요</font> 를 눌러보세요<br /><br /></p>
+                        </div>
+                        <div class="field">
+                            <!--https://www.codingfactory.net/10820 참고한 사이트
+                        success: 초록색 info: 민트색 warning: 노란색  danger: 빨간색 -->
+                            <!--<p><strong>원하는 화자를 선택하세요.</strong></p>-->
+
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-warning">
+                                    <input type="radio" name="id" value="0" port="5000" checked> 손석희
+                                    <!--<span style=" font: Poor Story, serif ;">
+                                    손석희
+                                </span>-->
+                                </label>
+                                <label class="btn btn-warning">
+                                    <input type="radio" name="id" value="1" port="5000" checked> 유인나
+                                </label>
+                                <label class="btn btn-warning">
+                                    <input type="radio" name="id" value="2" port="5000" checked> 코퍼스
+                                </label>
+                                <label class="btn btn-warning">
+                                    <input type="radio" name="id" value="3" port="5000" checked> 김난희
+                                </label>
+                                <label class="btn btn-warning">
+                                    <input type="radio" name="id" value="4" port="5000" checked> 이주형
+                                </label>
+                            </div>
+                        </div>
+                        <div class="field has-text-centered">
+                            <button class="button is-white" id="synthesize">
+                                <font color="orange"> 편지 읽어주세요 </font>
+                                <!--웹 폰트 색깔
+                            https://ojji.wayful.com/2015/03/HTML-How-to--Set-FONT-Size-Color-Weight-Family-Variant-Line-Height-ect.html
+                            난동이가 쓰고 싶은 글자
+                            https://fonts.google.com/specimen/Poor+Story?selection.family=Poor+Story
+                            -->
+                            </button>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <div class="columns">
+                                    <div class="column"></div>
+                                    <div class="column">
+                                        <div id="wave"></div>
+                                    </div>
+                                    <div class="column"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <div id="waveform"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="gtco-counter" class="gtco-bg gtco-cover gtco-counter">
+                <!--style="background-color: black;-->
+                <!--<div class="overlay"></div>-->
+                <div class="gtco-container">
+                    <div class="row animate-box">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gototop js-top">
+        <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+    </div>
+        
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <!-- jQuery Easing -->
+    <script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+    <!-- Bootstrap -->
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <!-- Waypoints -->
+    <script src="{{ url_for('static', filename='js/jquery.waypoints.min.js') }}"></script>
+    <!-- Carousel -->
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+    <!-- countTo -->
+    <script src="{{ url_for('static', filename='js/jquery.countTo.js') }}"></script>
+    <!-- Magnific Popup -->
+    <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/magnific-popup-options.js') }}"></script>
+    <!-- Main -->
+    <script src="{{ url_for('static', filename='js/main_greatness.js') }}"></script>
+</body>
+</html>

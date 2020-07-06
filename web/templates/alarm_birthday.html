@@ -1,0 +1,230 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Birthday Service</title>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+    <!--<link href="https://fonts.googleapis.com/css?family=Poor+Story&display=swap" rel="stylesheet">-->
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.css') }}">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+    <!-- Owl Carousel  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Modernizr JS -->
+    <script src="{{ url_for('static', filename='js/modernizr-2.6.2.min.js') }}"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="{{ url_for('static', filename='js/respond.min.js') }}"></script>
+    <![endif]-->
+    <!--여기는 tacotron 소스-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://wavesurfer-js.org/dist/wavesurfer.min.js"></script>
+
+    <script src="{{ url_for('static', filename='js/siriwave.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <style>
+        #text {
+            font-size: 2em;
+            padding: 1em 1em 1em 1em;
+            height: 50px;
+            color: black;
+            background: transparent;
+        }
+
+        label {
+            width: 200px;
+            height: 200px;
+            background-size: 200px 200px;
+        }
+
+        button {
+            width: 200px;
+            height: 200px;
+        }
+
+        body {
+            background-color:lightgoldenrodyellow;
+            /*background-size: 1000px 1000px;
+            background-repeat: no-repeat;*/
+            /*background: white url(https://contents.vryjam.com/ev22RaIELJ2LaZe.gif);*/
+            /*background: white url(http://mblogthumb2.phinf.naver.net/MjAxNzAyMjBfMTU1/MDAxNDg3NTIwOTQ2Mjgy.1TUJYwsGnflzhmtA8eWsSvXv7vFp44_Y0Fjwxy7c16og.7i7HWk_qHG-aGgCOdcm2JnquaC9e_xkNx1Cqf7-mz_Ag.GIF.epooney/birth_%285%29.gif?type=w800);*/
+        }
+
+        /*select {
+            width: 210px;
+            padding: .8em .5em;
+            background: url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg) no-repeat 95% 50%;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            border: 1px solid #999;
+            border-radius: 0px;
+            background-color: orange;
+        }*/
+    </style>
+</head>
+<body>
+    <!--출처: https://hongku.tistory.com/364 [IT에 취하개]-->
+    <!--<iframe src="C:\conda_env\test_ing\multi-speaker-tacotron-tensorflow\web\templates\기분.mp3" allow="autoplay" id="audio"></iframe>-->
+    <!--<bgsound src="https://youtu.be/7O0WVaaB_x8" loop="Infinite">-->
+    <div class="gtco-loader"></div>
+
+    <div id="page">
+        <nav class="gtco-nav" role="navigation">
+            <div class="gtco-container">
+                <div class="row animate-box">
+                    <div class="col-xs-2">
+                        <div id="gtco-logo"><a href="http://192.168.0.28:8888/">Custom TTS.</a></div>
+                    </div>
+                    <div class="col-xs-10 text-right menu-1">
+                        <ul>
+                            <li class="active"><a href="http://192.168.0.28:8888/">HOME</a></li>
+                            <li><a href="http://192.168.0.28:8888/basics">BASIC</a></li>
+                            <li class="has-dropdown">
+                                <a href="http://192.168.0.28:8888/lettering">LETTER</a>
+                            </li>
+                            <li class="has-dropdown">
+                                <a href="http://192.168.0.28:8888/alarm">Alarm</a>
+                                <ul class="dropdown">
+                                    <li><a href="http://192.168.0.28:8888/alarm_morningcall">모닝콜</a></li>
+                                    <li><a href="http://192.168.0.28:8888/alarm_brief">일정브리핑</a></li>
+                                    <li><a href="http://192.168.0.28:8888/alarm_birthday">생일축하</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="http://192.168.0.28:8888/contact">ABOUT</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+        <header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-color:#FAC24B; background-image:url(https://contents.vryjam.com/ev22RaIELJ2LaZe.gif); background-size: 1080px">
+            <div class="overlay"></div>
+            <div class="gtco-container">
+                <div class="row animate-box">
+                    <div class="col-md-8 col-md-offset-2 text-center">
+                        <div class="display-t">
+                            <div class="display-tc animate-box" data-animate-effect="fadeIn">
+                                <h1>Happy Birthday!</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="gtco-counter" class="gtco-bg gtco-cover gtco-counter">
+            <div class="gtco-container">
+                <div class="row animate-box">
+                    <br /><br /><br><br><br><br><br><br><br><br>
+                    <div class="field has-text-centered">
+                        <h><font size="6">1. <font color="orange">이름</font>이 뭔가요?</font></h>
+                    </div>
+
+                    <div class="col-md-8 col-md-offset-2 text-center">
+                        <div class="field">
+                            <div class="control has-icons-right">
+                                <textarea class="textarea" id="text" placeholder="{{ text }} "></textarea>
+                                <span class="icon is-small is-right" id="text-info-icon" style="display:none">
+                                    <i class="fa fa-info"></i>
+                                </span>
+                            </div>
+                            <p class="help is-danger" id="text-info" style="display:none">
+                                Wrong sentence
+                            </p>
+                        </div>
+                    </div>
+
+                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                    <div class="field has-text-centered">
+                        <h><font size="6">2. <font color="orange">화자</font>를 선택해보세요</font></h>
+                    </div>
+
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-warning" style="background-image: url(https://img5.yna.co.kr/photo/cms/2018/09/17/84/PCM20180917000184370_P2.jpg); background-size: 200px 210px">
+                            <input type="radio" name="id" value="0" port="5000" checked> 손석희
+                        </label>
+                        <label class="btn btn-warning" style="background-image: url(https://file.mk.co.kr/meet/neds/2018/12/image_readtop_2018_787250_15450979133573309.jpg); background-size: 200px 300px">
+                            <input type="radio" name="id" value="1" port="5000" checked> 유인나
+                        </label>
+                        <label class="btn btn-warning" style="background-image: url(http://www.thereport.co.kr/news/photo/201905/5832_6511_4633.jpg); background-size: 370px 220px">
+                            <input type="radio" name="id" value="2" port="5000" checked> 코퍼스
+                        </label>
+                        <label class="btn btn-warning" style="background-image: url(images/2.jpg); background-size: 260px 300px">
+                            <input type="radio" name="id" value="3" port="5000" checked> 김난희
+                        </label>
+                        <label class="btn btn-warning" style="background-image: url(images/1.jpg); background-size: 200px 310px">
+                            <input type="radio" name="id" value="4" port="5000" checked> 이주형
+                        </label>
+                    </div>
+
+
+                    <br /><br /><br /><br /><br />
+                    <div class="field has-text-centered">
+                        <button class="button is-white" id="synthesize">
+                            <font color="orange" , font size="4"> 노래 부르기</font>
+                        </button>
+                    </div>
+
+                    <br /><br /><br />
+                    <div class="control has-text-centered">
+                        <div class="field">
+                            <div class="control">
+                                <div class="columns">
+                                    <div class="column"></div>
+                                    <div class="column">
+                                        <div id="wave"></div>
+                                    </div>
+                                    <div class="column"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <div id="waveform"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="gtco-counter" class="gtco-bg gtco-cover gtco-counter">
+            <div class="gtco-container">
+                <div class="row animate-box">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gototop js-top">
+        <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+    </div>
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <!-- jQuery Easing -->
+    <script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+    <!-- Bootstrap -->
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <!-- Waypoints -->
+    <script src="{{ url_for('static', filename='js/jquery.waypoints.min.js') }}"></script>
+    <!-- Carousel -->
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+    <!-- countTo -->
+    <script src="{{ url_for('static', filename='js/jquery.countTo.js') }}"></script>
+    <!-- Magnific Popup -->
+    <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/magnific-popup-options.js') }}"></script>
+    <!-- Main -->
+    <script src="{{ url_for('static', filename='js/main_greatness.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lettering Service</title>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+    <!--<link href="https://fonts.googleapis.com/css?family=Poor+Story&display=swap" rel="stylesheet">-->
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <link href="C:/Users/Nanhee/Desktop/fontawesome-free-5.11.2-web/css/all.css" rel="stylesheet"> <!--load all styles -->
+
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+    <!-- Owl Carousel  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Modernizr JS -->
+    <script src="{{ url_for('static', filename='js/modernizr-2.6.2.min.js') }}"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="{{ url_for('static', filename='js/respond.min.js') }}"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <div class="gtco-loader"></div>
+
+    <div id="page">
+        <nav class="gtco-nav" role="navigation">
+            <div class="gtco-container">
+                <div class="row">
+                    <div class="col-xs-2">
+                        <div id="gtco-logo"><a href="http://192.168.0.28:8888/">Custom TTS.</a></div>
+                    </div>
+                    <div class="col-xs-10 text-right menu-1">
+                        <ul>
+                            <li class="active"><a href="http://192.168.0.28:8888/">HOME</a></li>
+                            <li><a href="http://192.168.0.28:8888/basics">BASIC</a></li>
+                            <li class="has-dropdown">
+                                <a href="http://192.168.0.28:8888/lettering">LETTER</a>
+                            </li>
+                            <li class="has-dropdown">
+                                <a href="http://192.168.0.28:8888/alarm">Alarm</a>
+                                <ul class="dropdown">
+                                    <li><a href="http://192.168.0.28:8888/alarm_morningcall">모닝콜</a></li>
+                                    <li><a href="http://192.168.0.28:8888/alarm_brief">일정브리핑</a></li>
+                                    <li><a href="http://192.168.0.28:8888/alarm_birthday">생일축하</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="http://192.168.0.28:8888/contact">ABOUT</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+        <header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-image:url(https://img.insight.co.kr/static/2018/08/15/700/s03k8asm551d48hpef2t.jpg);">
+            <div class="overlay"></div>
+            <div class="gtco-container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center">
+                        <div class="display-t">
+                            <div class="display-tc animate-box" data-animate-effect="fadeIn">
+                                <h1>ALARM</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="gtco-services">
+            <div class="gtco-container">
+
+                <div class="row animate-box">
+                    <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+                        <h2>What We Offer</h2>
+                        <p>
+                            아침마다 기상시에 들을 수 있는 <a href="http://192.168.0.28:8888/alarm_morningcall" target="_blank">모닝콜 </a>, <br />
+                            오늘 하루의 일정을 들을 수 있는 <a href="http://192.168.0.28:8888/alarm_brief" target="_blank">일정브리핑 </a>, <br />
+                            <a href="http://192.168.0.28:8888/alarm_birthday" target="_blank">생일 축하 </a> 메시지를 글로 남겨 음성으로 선물 받을 수 있습니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="row animate-box">
+
+                    <div class="gtco-tabs">
+                        <ul class="gtco-tab-nav">
+                            <li class="active"><a href="#" data-tab="1"><span class="icon visible-xs"><i class="icon-command"></i></span><span class="hidden-xs">모닝콜</span></a></li>
+                            <li><a href="#" data-tab="2"><span class="icon visible-xs"><i class="icon-bar-graph"></i></span><span class="hidden-xs">일정브리핑</span></a></li>
+                            <li><a href="#" data-tab="3"><span class="icon visible-xs"><i class="icon-bag"></i></span><span class="hidden-xs">생일 축하</span></a></li>
+                            <li><a href="#" data-tab="4"><span class="icon visible-xs"><i class="icon-box"></i></span><span class="hidden-xs">그 외 뭘 구현할 수 있을까?</span></a></li>
+
+                        </ul>
+                        <!-- Tabs -->
+                        <div class="gtco-tab-content-wrap">
+                            <div class="gtco-tab-content tab-content active" data-tab-content="1">
+                                <div class="col-md-6">
+                                    <div class="gtco-video gtco-bg" style="background-image: url(https://i.ytimg.com/vi/RLxJVEeSZyw/maxresdefault.jpg);">                      
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h2><a href="http://192.168.0.28:8888/alarm_morningcall" target="_blank"><font color="gray"><u>모닝콜</u></font></a></h2>
+                                    <p>아침마다 가족의 목소리, 연인의 목소리, 좋아하는 연예인의 목소리로 일어난다면 어떤 기분일까요?</p>
+                                    <p>우리는 손석희, 유인나, 한국어 코퍼스, 팀원 이주형, 김난희의 목소리를 학습하여 서비스를 제공하고 있습니다.</p>
+                                    <div class="row">
+                                        <div class="col-xs-10">
+                                            <h2 class="uppercase"> 나의 목소리 학습?</h2>
+                                            <p>
+                                                최근 네이버, 넷마블, KT, SKT, 아마존에서<br>  개인의 목소리를 학습하고 있습니다.
+                                            </p>
+                                            <p>
+                                                하지만 최신 기술로는 30분보다 짧은 시간으로는 <br>자연스러운 음성 합성이 불가능하며
+                                            </p>
+                                            <p>
+                                                우리는 이러한 단점을 보완하기 위해 <br> 다중 화자를 한번에 학습하여 더 좋은 결과를 얻고 있습니다.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gtco-tab-content tab-content" data-tab-content="2">
+                                <div class="col-md-6 col-md-push-6">
+                                    <div class="gtco-video gtco-bg" style="background-image: url(https://i.ytimg.com/vi/sdW2I2IaDrg/maxresdefault.jpg); ">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-md-pull-6">
+                                    <h2><a href="http://192.168.0.28:8888/alarm_brief" target="_blank"><font color="gray"><u>일정브리핑</u></font></a></h2>
+                                     <p>
+                                        오늘 하루의 일정을 좋아하는 사람의 목소리로 들으면 어떨까요? <br />
+                                        원하는 목소리로 일정을 설정하고, 알림을 받아보세요~
+                                    </p>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h2 class="uppercase">아침 브리핑</h2>
+                                            <p>TALK. 오늘 아침 기온은 9도이며, 영남대학교 출근 일정이 있습니다. </p>
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h2 class="uppercase">점심 브리핑</h2>
+                                            <p>TALK. 11월 22일 1시에는 종합설계 발표가 있습니다. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gtco-tab-content tab-content" data-tab-content="3">
+                                <div class="col-md-6 col-md-push-6">
+                                    <div class="gtco-video gtco-bg" style="background-image: url(https://previews.123rf.com/images/aliasching/aliasching1409/aliasching140900198/31818499-%EC%83%9D%EC%9D%BC-%EC%B6%95%ED%95%98%ED%95%A9%EB%8B%88%EB%8B%A4.jpg); ">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-md-pull-6">
+                                    <h2><a href="http://192.168.0.28:8888/alarm_birthday" target="_blank"><font color="gray"><u>생일 축하</u></font></a></h2>
+                                   
+                                    <p>친구에게 편지를 읽어주고 싶은데 어떡하죠?</p>
+                                    <p>개인 음성 서비스를 이용해서 친구에게 원하는 목소리로 편지를 읽어주는 <br />선물을 해보세요!</p>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h2 class="uppercase">친구에게</h2>
+                                            <p>TALK. 넌 정말 나의 최고의 친구야.</p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h2 class="uppercase">부모님께</h2>
+                                            <p>TALK. 낳아주시고 키워주셔서<br /> 감사합니다.</p>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>  
+                            <div class="gtco-tab-content tab-content" data-tab-content="4">
+                                <div class="col-md-6">
+                                    <div class="gtco-video gtco-bg" style="background-image: url(http://www.elec4.co.kr/photo/2018/20180226-003.jpg);">
+                                    </div>
+                                    <!--<img src="http://www.elec4.co.kr/photo/2018/20180226-003.jpg" width="530">-->
+                                </div>
+                                <div class="col-md-6">
+                                    <h2>그 외 뭘 구현할 수 있을까?</h2>
+                                    <div class="feature-left animate-box" data-animate-effect="fadeInLeft">
+                                        <span class="icon">
+                                            <i class="fa fa-check"></i>
+                                        </span>
+                                        <div class="feature-copy">
+                                            <h3>운전시</h3>
+                                            <p>
+                                                시야확보가 어려운 운전 중 상황을 알려준다면<br>
+                                                더욱 안정적인 운전을 할 수 있습니다.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="feature-left animate-box" data-animate-effect="fadeInLeft">
+                                        <span class="icon">
+                                            <i class="fa fa-check"></i>
+                                        </span>
+                                        <div class="feature-copy">
+                                            <h3>Iot 사물인터넷과 접목</h3>
+                                            <p>최근에는 인공지능 스피커와 개인 음성 합성을<br> 접목하는 형태로 발전 중에 있습니다.</p>
+                                            <p>앞으로의 스마트 홈, 스마트 카 등 개인의 음성은<br> 다양한 사물 인터넷과 접목 가능합니다.</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature-left animate-box" data-animate-effect="fadeInLeft">
+                                        <span class="icon">
+                                            <i class="fa fa-check"></i>
+                                        </span>
+                                        <div class="feature-copy">
+                                            <h3>그 사람의 목소리가 듣고 싶을 때</h3>
+                                            <p>
+                                                보고 싶고 그립운 사람의 목소리를 듣고 싶을 때 <br />
+                                                고인의 목소리로 편지 내용을 읽고 싶을 때 <br />
+                                                언제든지 들을 수 있습니다.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="feature-left animate-box" data-animate-effect="fadeInLeft">
+                                        <span class="icon">
+                                            <i class="fa fa-check"></i>
+                                        </span>
+                                        <div class="feature-copy">
+                                            <h3>안내판, 관광명소에서</h3>
+                                            <p>
+                                                눈이 잘 보이지 않는 어르신들이나 시각장애인들은 <br />
+                                                음성을 통해 이곳의 설명을 쉽게 들을 수 있습니다.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="gototop js-top">
+            <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+        </div>
+
+        <!-- jQuery -->
+        <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+        <!-- jQuery Easing -->
+        <script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+        <!-- Bootstrap -->
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        <!-- Waypoints -->
+        <script src="{{ url_for('static', filename='js/jquery.waypoints.min.js') }}"></script>
+        <!-- Carousel -->
+        <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+        <!-- countTo -->
+        <script src="{{ url_for('static', filename='js/jquery.countTo.js') }}"></script>
+        <!-- Magnific Popup -->
+        <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/magnific-popup-options.js') }}"></script>
+        <!-- Main -->
+        <script src="{{ url_for('static', filename='js/main_greatness.js') }}"></script>
+</body>
+</html>

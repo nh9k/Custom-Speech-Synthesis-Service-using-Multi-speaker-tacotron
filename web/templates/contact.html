@@ -1,0 +1,250 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Deep learning for custom TTS</title>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+    <!-- Icomoon Icon Fonts-->
+    <!--<link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.css') }}">-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+    <!-- Owl Carousel  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <script src="C:/conda_env/test_ing/multi-speaker-tacotron-tensorflow/web/download/basic/1.wav"></script>
+    <link href="C:/conda_env/test_ing/multi-speaker-tacotron-tensorflow/web/download/basic/1.wav" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="{{ url_for('static', filename='js/respond.min.js') }}"></script>
+    <![endif]-->
+    <style>
+        label {
+            width: 130px;
+            height: 130px;
+        }
+    </style>
+</head>
+<body>
+    <div class="gtco-loader"></div>
+    <div id="page">
+        <nav class="gtco-nav" role="navigation">
+            <div class="gtco-container">
+                <div class="row animate-box">
+                    <div class="col-xs-2">
+                        <div id="gtco-logo"><a href="http://192.168.0.28:8888/">Custom TTS.</a></div>
+                    </div>
+                    <div class="col-xs-10 text-right menu-1">
+                        <ul>
+                            <li class="active"><a href="http://192.168.0.28:8888/">HOME</a></li>
+                            <li><a href="http://192.168.0.28:8888/basics">BASIC</a></li>
+                            <li class="has-dropdown">
+                                <a href="http://192.168.0.28:8888/lettering">LETTER</a>
+                            </li>
+                            <li class="has-dropdown">
+                                <a href="http://192.168.0.28:8888/alarm">Alarm</a>
+                                <ul class="dropdown">
+                                    <li><a href="http://192.168.0.28:8888/alarm_morningcall">모닝콜</a></li>
+                                    <li><a href="http://192.168.0.28:8888/alarm_brief">일정브리핑</a></li>
+                                    <li><a href="http://192.168.0.28:8888/alarm_birthday">생일축하</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="http://192.168.0.28:8888/contact">ABOUT</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+        <header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-image:url(https://www.abilitazioninsegnamento.it/wp-content/uploads/2014/11/contatti.png);">
+            <div class="overlay"></div>
+            <div class="gtco-container">
+                <div class="row animate-box">
+                    <div class="col-md-8 col-md-offset-2 text-center">
+                        <div class="display-t">
+                            <div class="display-tc animate-box" data-animate-effect="fadeIn">
+                                <h1>About our service & Get In Touch</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="gtco-testimonial">
+            <div class="gtco-container">
+                <div class="row animate-box">
+                    <div class="owl-carousel owl-carousel-fullwidth ">
+                        <div class="item">
+                            <div class="testimony-slide active text-center">
+                                <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+                                    <h2>Why we service voice synthesizer?</h2>
+
+                                    <span><font size="3">Task Motivation</font></span>
+                                    <blockquote> </blockquote>
+                                    <p>
+                                        &ldquo;원하는 문장을 기계적인 문장이나 일반적인 목소리로 읽어주는 것이 아닌
+                                        <br /> <font color="#FB712C">
+                                            지인의 목소리로, 자신의 목소리
+                                        </font>로 문장을 들을 수 있습니다.
+                                        <br /> 이런 우리 생활의 <font color="#FB712C">사소한 감동들</font>이 하루의 활력소가 되었으면 좋겠다고 생각이 들었습니다.
+                                    </p>
+                                    <p>
+                                        사용자만의 음성 특징을 고려하여 Speech 기능을 수행함으로써
+                                        <br /> 기존의 일반적인 TTS 서비스와는 차이점이 있습니다.
+                                        &rdquo;
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimony-slide active text-center">
+                                <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+                                    <h2>What is the Multi-speaker-tacotron?</h2>
+                                    <div class="gtco-video gtco-bg" style="background-image: url(https://t1.daumcdn.net/cfile/tistory/994AD8475B504C190C);">
+                                    </div>
+
+                                    <br />
+                                    <span><font size="3">tacotron model <a href="https://github.com/carpedm20/multi-speaker-tacotron-tensorflow" class="twitter">Site</a></font></span>
+                                    <br />
+                                    <p>
+                                        &ldquo;<font color="#FB712C">Multi-speaker-tacotron</font>은
+                                        Google의 <font color="#FB712C">Tacotron</font>과 Baidu의<font color="#FB712C">
+                                            Deep Voice
+                                        </font>가 결합한 모델로,<br />
+                                        크게 Encoder, Decoder, Attention, Vocoder로 구성되어 있습니다.&rdquo;
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimony-slide active text-center">
+                                <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+                                    <h2>How does Tacotron learn?</h2>
+                                    <div class="gtco-video gtco-bg" style="background-image: url(/images/learning1.jpg);">
+                                    </div>
+
+                                    <span><br /><font size="3">Learning Process</font></span>
+
+                                    <p>
+                                        <br />
+                                        &ldquo;Smartlab 서버 주피터노트북, <font color="#FB712C">Python-Flask</font>와 <font color="#FB712C">
+                                            Tensorflow
+                                        </font>로 개발을 진행했습니다.
+                                        <br />손석희 <font color="#FB712C">
+                                            11
+                                        </font>시간, 유인나 <font color="#FB712C">
+                                            5
+                                        </font>시간, 코퍼스와 이주형, 김난희 학생은  <br /> <font color="#FB712C">
+                                            3
+                                        </font>시간 분량 음성데이터를 학습했습니다.
+                                        <br />원하는 화자의 조합으로 학습을 진행하며, 한번 학습시 <font color="#FB712C">5~7</font>일이 소요됩니다.
+                                        <br />200,000 ~ 500,000 Step에서 어느정도 좋은 학습결과를 얻을 수 있습니다.
+                                        <br />텍스트를 입력받으면 학습한 모델로부터 <font color="#FB712C">
+                                            실시간 음성 합성
+                                        </font>된 결과를 제공합니다.
+                                        &rdquo;
+                                    </p>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br /><br /><br /><br />
+                <div class="gtco-container">
+                    <div class="row animate-box">
+                        <div class="testimony-slide active text-center">
+                            <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+                                <h2>Download the files you ran!</h2>
+                                <p>원하는 항목을 다운로드 받아보세요</p>
+                                <a href="{{ url_for('static', filename='download/basic/created_alarm.wav') }}" download="created_alarm.wav">기본 합성</a>
+                                <br />
+                                <a href="{{ url_for('static', filename='download/lettering/created_alarm.wav') }}" download="created_alarm.wav">편지 쓰기</a>
+                                <br />
+                                <a href="{{ url_for('static', filename='download/morning_call/created_alarm.wav') }}" download="created_alarm.wav">모닝콜</a>
+                                <br />
+                                <a href="{{ url_for('static', filename='download/briefing/created_alarm.wav') }}" download="created_alarm.wav">브리핑</a>
+                                <br />
+                                <a href="{{ url_for('static', filename='download/birthday/created_alarm.wav') }}" download="created_alarm.wav">생일 축하</a>
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gtco-section">
+                <div class="gtco-container">
+                    <div class="row animate-box">
+                        <h2>Get in touch!</h2>
+                        <h3>Our Office</h3>
+                        <ul>
+                            <li class="address"> 경상북도 경산시 대학로 280 영남대학교 <br> 전기관 208호 RCLab</li>
+                            <li class="phone"> <a href="tel://0538103923">+ 053 810 3923</a></li>
+                        </ul>
+                        <h3>Nanhee Kim</h3>
+                        <ul>
+                            <!--<li class="address">198 West 21th Street, <br> Suite 721 New York NY 10016</li>-->
+                            <!--<li class="phone"><a href="tel://1234567920">+ 1235 2355 98</a></li>-->
+                            <li class="email"><a href="kimnanhee97@naver.com">kimnanhee97@naver.com</a></li>
+                            <li class="phone"><a href="tel://01097939953">+ 010 9793 9953</a></li>
+                        </ul>
+                        <h3>Juhyung Lee</h3>
+                        <ul>
+                            <!--<li class="address">198 West 21th Street, <br> Suite 721 New York NY 10016</li>
+                            <li class="phone"><a href="tel://1234567920">+ 1235 2355 98</a></li>-->
+                            <li class="email"><a href="nana970@naver.com">nana970@naver.com</a></li>
+                            <li class="phone"><a href="tel://01072773669">+ 010 7277 3669</a></li>
+                        </ul>
+                        <h3>Hoyeon Kim</h3>
+                        <ul>
+                            <!--<li class="address">198 West 21th Street, <br> Suite 721 New York NY 10016</li>-->
+                            <!--<li class="phone"><a href="tel://1234567920">+ 1235 2355 98</a></li>-->
+                            <li class="email"><a href="ghdus566@naver.com">ghdus566@naver.com</a></li>
+                            <li class="phone"><a href="tel://01044321351">+ 010 4432 1351</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="gototop js-top">
+        <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+    </div>
+
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <!-- jQuery Easing -->
+    <script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+    <!-- Bootstrap -->
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <!-- Waypoints -->
+    <script src="{{ url_for('static', filename='js/jquery.waypoints.min.js') }}"></script>
+    <!-- Carousel -->
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+    <!-- countTo -->
+    <script src="{{ url_for('static', filename='js/jquery.countTo.js') }}"></script>
+    <!-- Magnific Popup -->
+    <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/magnific-popup-options.js') }}"></script>
+    <!-- Main -->
+    <script src="{{ url_for('static', filename='js/main_greatness.js') }}"></script>
+</body>
+</html>

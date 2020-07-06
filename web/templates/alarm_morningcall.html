@@ -1,0 +1,305 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MorningCall Service</title>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+    <!--<link href="https://fonts.googleapis.com/css?family=Poor+Story&display=swap" rel="stylesheet">-->
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+    <!-- Icomoon Icon Fonts-->
+    <!--<link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.css') }}">-->
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+    <!-- Owl Carousel  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Modernizr JS -->
+    <!--<script src="{{ url_for('static', filename='js/modernizr-2.6.2.min.js') }}"></script>-->
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="{{ url_for('static', filename='js/respond.min.js') }}"></script>
+    <![endif]-->
+    <!--여기는 tacotron 소스-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://wavesurfer-js.org/dist/wavesurfer.min.js"></script>
+
+    <script src="{{ url_for('static', filename='js/siriwave.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <style>
+        #text {
+            font-size: 1.2em;
+            padding: 1em 1em 1em 1em;
+            height: 30px;
+            width: 30px;
+            color: black;
+            background: transparent;
+        }
+
+        label {
+            width: 200px;
+            height: 200px;
+            background-size: 200px 200px;
+        }
+
+        button {
+            width: 100px;
+            height: 100px;
+            background-color:lightsalmon;
+            color:white;
+        }
+
+        /*body {
+            background: white;
+            background-size: 1000px 1000px;
+            background-repeat: no-repeat;
+        }
+        select {
+            width: 210px;
+            padding: .8em .5em;
+            background: url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg) no-repeat 95% 50%;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            border: 1px solid #999;
+            border-radius: 0px;
+            background-color: orange;
+        }*/
+    </style>
+    <script>
+        function play1() {
+            var audio = document.getElementById("audio1");
+            audio.play();
+        }
+        function play2() {
+            var audio = document.getElementById("audio2");
+            audio.play();
+        }
+        function play3() {
+            var audio = document.getElementById("audio3");
+            audio.play();
+        }
+        function play4() {
+            var audio = document.getElementById("audio4");
+            audio.play();
+        }
+        function play5() {
+            var audio = document.getElementById("audio5");
+            audio.play();
+        }
+        function play6() {
+            var audio = document.getElementById("audio6");
+            audio.play();
+        }
+        function play7() {
+            var audio = document.getElementById("audio7");
+            audio.play();
+        }
+    </script>
+</head>
+<body>
+
+
+
+    <!--여기에넣을까?-->
+
+    <div class="gtco-loader"></div>
+
+    <div id="page">
+        <nav class="gtco-nav" role="navigation">
+            <div class="gtco-container">
+                <div class="row animate-box">
+                    <div class="col-xs-2">
+                        <div id="gtco-logo"><a href="http://192.168.0.28:8888/">Custom TTS.</a></div>
+                    </div>
+                    <div class="col-xs-10 text-right menu-1">
+                        <ul>
+                            <li class="active"><a href="http://192.168.0.28:8888/">HOME</a></li>
+                            <li><a href="http://192.168.0.28:8888/basics">BASIC</a></li>
+                            <li class="has-dropdown">
+                                <a href="http://192.168.0.28:8888/lettering">LETTER</a>
+                            </li>
+                            <li class="has-dropdown">
+                                <a href="http://192.168.0.28:8888/alarm">Alarm</a>
+                                <ul class="dropdown">
+                                    <li><a href="http://192.168.0.28:8888/alarm_morningcall">모닝콜</a></li>
+                                    <li><a href="http://192.168.0.28:8888/alarm_brief">일정브리핑</a></li>
+                                    <li><a href="http://192.168.0.28:8888/alarm_birthday">생일축하</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="http://192.168.0.28:8888/contact">ABOUT</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+        <header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-image:url(https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/56I6/image/gXPPD3trwENbtpvMcRook3d_AfE.jpg); background-size:700px">
+            <div class="overlay"></div>
+            <div class="gtco-container">
+                <div class="row animate-box">
+                    <div class="col-md-8 col-md-offset-2 text-center">
+                        <div class="display-t">
+                            <div class="display-tc animate-box" data-animate-effect="fadeIn">
+                                <h1>Morning Call</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="gtco-counter" class="gtco-bg gtco-cover gtco-counter">
+            <!--style="background-color: black;-->
+            <div class="gtco-container">
+                <div class="row animate-box">
+
+                    <br /><br /><br />
+                    <div class="field has-text-centered" style="background-color:white">
+                        <h><font size="6">1. <font color="orange">알람음</font>을 들어보고 2번 항목에서 선택해보세요</font></h>
+                    </div>
+
+                    <button type="button" href="" class="btn btn-sm btn-outline-primary" onclick="play1()">1번</button>
+                    <audio id="audio1" src="{{ url_for('static', filename='../basic_source/alarm/sample/alarm0_type0.wav') }}"></audio>
+                    
+                    <button type="button" href="" class="btn btn-sm btn-outline-primary" onclick="play2()">2번</button>
+                    <audio id="audio2" src="{{ url_for('static', filename='../basic_source/alarm/sample/alarm1_type0.wav') }}"></audio>
+                    
+                    <button type="button" href="" class="btn btn-sm btn-outline-primary" onclick="play3()">3번</button>
+                    <audio id="audio3" src="{{ url_for('static', filename='../basic_source/alarm/sample/alarm2_type0.wav') }}"></audio>
+                    
+                    <button type="button" href="" class="btn btn-sm btn-outline-primary" onclick="play4()">4번</button>
+                    <audio id="audio4" src="{{ url_for('static', filename='../basic_source/alarm/sample/alarm3_type0.wav') }}"></audio>
+                    <br />
+                    <button type="button" href="" class="btn btn-sm btn-outline-primary" onclick="play5()">5번</button>
+                    <audio id="audio5" src="{{ url_for('static', filename='../basic_source/alarm/sample/alarm0_type1.wav') }}"></audio>
+                    
+                    <button type="button" href="" class="btn btn-sm btn-outline-primary" onclick="play6()">6번</button>
+                    <audio id="audio6" src="{{ url_for('static', filename='../basic_source/alarm/sample/alarm1_type1.wav') }}"></audio>
+                    
+                    <button type="button" href="" class="btn btn-sm btn-outline-primary" onclick="play7()">7번</button>
+                    <audio id="audio7" src="{{ url_for('static', filename='../basic_source/alarm/sample/alarm2_type1.wav') }}"></audio>
+                    <br>
+
+                    <br /><br /><br /><br /><br />
+                    <div class="field has-text-centered">
+                        <h><font size="6">2. <font color="orange">어떤 말</font>을 듣고 싶나요?</font></h>
+                        <br />
+                    </div>
+
+                    <h3>
+                        <font size="4">
+                            다음 예시 형식에 따라 알람을 설정해보세요.<br /> <br />ex. <font color="orange"> 5번 14시 30분 난동이 일어날 시간이에요</font>
+                            <br /><br />
+                        </font>
+                    </h3>
+
+                    <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+                        <div class="field">
+                            <div class="control has-icons-right">
+                                <textarea class="textarea" id="text" placeholder="{{ text }} "></textarea>
+                                <span class="icon is-small is-right" id="text-warning-icon" style="display:none">
+                                    <i class="fa fa-warning"></i>
+                                </span>
+                            </div>
+                            <p class="help is-danger" id="text-warning" style="display:none">
+                                Wrong sentence
+                            </p>
+                        </div>
+                    </div>
+
+                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                    <div class="field has-text-centered">
+                        <h><font size="6">3. <font color="orange">화자</font>를 선택해보세요</font></h>
+                    </div>
+
+                    <br />
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-warning" style="background-image: url(https://img5.yna.co.kr/photo/cms/2018/09/17/84/PCM20180917000184370_P2.jpg); background-size: 200px 210px">
+                            <input type="radio" name="id" value="0" port="5000" checked> 손석희
+                        </label>
+                        <label class="btn btn-warning" style="background-image: url(https://file.mk.co.kr/meet/neds/2018/12/image_readtop_2018_787250_15450979133573309.jpg); background-size: 200px 300px">
+                            <input type="radio" name="id" value="1" port="5000" checked> 유인나
+                        </label>
+                        <label class="btn btn-warning" style="background-image: url(http://www.thereport.co.kr/news/photo/201905/5832_6511_4633.jpg); background-size: 370px 220px">
+                            <input type="radio" name="id" value="2" port="5000" checked> 코퍼스
+                        </label>
+                        <label class="btn btn-warning" style="background-image: url(images/2.jpg); background-size: 260px 300px">
+                            <input type="radio" name="id" value="3" port="5000" checked> 김난희
+                        </label>
+                        <label class="btn btn-warning" style="background-image: url(images/1.jpg); background-size: 200px 310px">
+                            <input type="radio" name="id" value="4" port="5000" checked> 이주형
+                        </label>
+                    </div>
+
+                    <br /><br /><br /><br />
+                    <div class="field has-text-centered">
+                        <button class="button is-white" id="synthesize">
+                            <font color="orange" , font size="5"> 알람 설정하기</font>
+                        </button>
+                    </div>
+                    <br /><br /><br /><br /><br /><br />
+
+                </div>
+
+            </div>
+            <div id="gtco-counter" class="gtco-bg gtco-cover gtco-counter">
+                <!--<div class="overlay"></div>-->
+                <div class="gtco-container">
+                    <div class="row animate-box">
+                        <div class="control has-text-centered">
+                            <div class="field">
+                                <div class="control">
+                                    <div class="columns">
+                                        <div class="column"></div>
+                                        <div class="column">
+                                            <div id="wave"></div>
+                                        </div>
+                                        <div class="column"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <div id="waveform"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="gototop js-top">
+        <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <!-- jQuery Easing -->
+    <script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+    <!-- Bootstrap -->
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <!-- Waypoints -->
+    <script src="{{ url_for('static', filename='js/jquery.waypoints.min.js') }}"></script>
+    <!-- Carousel -->
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+    <!-- countTo -->
+    <script src="{{ url_for('static', filename='js/jquery.countTo.js') }}"></script>
+    <!-- Magnific Popup -->
+    <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/magnific-popup-options.js') }}"></script>
+    <!-- Main -->
+    <script src="{{ url_for('static', filename='js/main_greatness.js') }}"></script>
+
+</body>
+</html>

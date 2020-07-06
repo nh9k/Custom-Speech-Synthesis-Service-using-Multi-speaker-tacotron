@@ -15,7 +15,7 @@ We won an overwhelming first place in the competition (Electronic Engineering Cr
 
 - The `learning` was done on the `Linux server`, and the `demonstration`([Demo video](https://nh9k.github.io/ml/Custom-Service.html)) was done on the `Windows server`
 
-- To use for service, created phrase and composed BGM with synthesized voice using `librosa`
+- To use for service, created phrase and composed BGM with synthesized voice using `librosa` and `pydub`
 
 - This is the [source code](https://github.com/nh9k/Custom-Speech-Synthesis-Service-using-Multi-speaker-tacotron) of the computer that I demonstrated (`Windows system`)
 
@@ -91,7 +91,7 @@ python app.py --load_path logs/son+yuinna --num_speakers=2
 
 <br/>  
 
-## some issues
+## Some issues
 #### Librosa version problem
 If you use a different version of librosa(0.6.2 or 0.6.3), learning can stop after 500 steps.  
 Fix it with the following source code. (the file:`audio/__init__.py`)  
@@ -180,20 +180,21 @@ You can refer to [our version](#).
 
 ## Model
 
-If you want to model-learning, you can refer to source code here.  
+If you want to model-learning, you can refer to original source code here.  
 
 - [Multi-speaker-tacotron model](https://github.com/carpedm20/multi-speaker-tacotron-tensorflow)     
 
 <br/>  
 
 ## Project demo & Presentation
-[My blog demo video & PPT](https://nh9k.github.io/ml/Custom-Service.html)
+[Demo video & PPT](https://nh9k.github.io/ml/Custom-Service.html)
 
 <br/>  
 
 ## Real demo web page & Source Code  
 
-I am reviewing the source code part that can be provided without any problems.
+I am reviewing the real demo web page part that can be provided without any problems.  
+[source code](https://github.com/nh9k/Custom-Speech-Synthesis-Service-using-Multi-speaker-tacotron)
 
 <br/>  
 
