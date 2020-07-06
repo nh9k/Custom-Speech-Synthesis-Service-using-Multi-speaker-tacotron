@@ -13,7 +13,7 @@ We won an overwhelming first place in the competition (Electronic Engineering Cr
 
 - Called up `learned log(.ckpt)` with a `good speaker combination` and performed speech synthesis by `switching model` during the service
 
-- The `learning` was done on the `Linux server`, and the `demonstration`([Demo video](https://nh9k.github.io/ml/Custom-Service.html)) was done on the `Windows server`
+- The `learning` was done on the `Linux(Ubuntu)`, and the `demonstration`([Demo video](https://nh9k.github.io/ml/Custom-Service.html)) was done on the `Windows`
 
 - To use for service, created phrase and composed BGM with synthesized voice using `librosa` and `pydub`
 
@@ -25,7 +25,7 @@ We won an overwhelming first place in the competition (Electronic Engineering Cr
 
 ### Preparing datasets
 
-#### Slice audio file with silence  
+#### Slice audio file with silence interval
 
 ```
 python3 -m audio.silence --audio_pattern "./datasets/yuinna/audio/*.wav" --method=pydub`
@@ -71,7 +71,7 @@ tensorboard --logdir=logs\son+yuinna
 
 <br/>  
 
-### Synthesis audio & Demo sites
+### Synthesis audio & Run Demo APP
 
 #### Synthesis  
 
@@ -81,7 +81,7 @@ python synthesizer.py --load_path logs/son+yuinna --text "반갑습니다" --num
 - id 0 is Seok-Hee Son.
 - id 1 is In-Na Yoo.
 
-#### APP (Demo Web page)  
+#### Run APP (Demo web page)  
 
 ```
 python app.py --load_path logs/son+yuinna --num_speakers=2
