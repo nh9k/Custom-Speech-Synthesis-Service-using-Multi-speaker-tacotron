@@ -174,7 +174,7 @@ def save_audio(audio, path, sample_rate=None):
 ## Prerequisites
 
 There is a difference from [the original model github version](https://github.com/carpedm20/multi-speaker-tacotron-tensorflow/blob/master/requirements.txt).  
-You can refer to [our version](#).
+You can refer to [our version](https://github.com/nh9k/Custom-Speech-Synthesis-Service-using-Multi-speaker-tacotron/blob/master/requirements_ours.txt).
 
 <br/>  
 
